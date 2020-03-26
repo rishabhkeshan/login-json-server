@@ -10,6 +10,7 @@ function getInfo() {
       .then((data) => {
       	data.forEach(function(user){
          output=`${user.username}`+`${user.email}`+`${user.password}`;
+         console.log(output.localeCompare(username));
          	if(output.localeCompare(username) == 1) {
          					txt="Successfuly Logged In!!";
 			document.getElementById("disp").innerHTML = txt;
